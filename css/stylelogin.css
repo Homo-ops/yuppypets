@@ -1,0 +1,131 @@
+/* parte login */
+body {
+    font-family: 'Arial', sans-serif;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe9bf; /* Cor de fundo para quando a imagem não carregar */
+    background-image: url('https://img.freepik.com/fotos-gratis/vista-superior-de-uma-tigela-completa-de-racao-para-caes-e-acessorios_23-2148949574.jpg?uid=R194792476&ga=GA1.1.8176135.1743819772&semt=ais_hybrid&w=740');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    background-size: cover;
+    background-position: center;
+  }
+/* Container principal */
+
+
+/* Link de 'Cadastre-se' */
+.link-toggle {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.link-toggle a {
+    color:  #335288;
+    text-decoration: none;
+}
+
+.link-toggle a:hover {
+    text-decoration: underline;
+}
+
+/* Container principal */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    background: #fff8dc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #f4d03f;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    font-family: Marker Felt, fantasy;
+	color:#158674;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+
+/* Pablo: aumentei a width pra ficar no mesmo tamanho que o botão de finalizar o login */
+.input-field {
+    width: 378px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #d5d8dc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fdfefe;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #ffe9bf;
+    box-shadow: 0 0 5px #ffe9bf;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #158674;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #d35400;
+}
+
+.esqueceu-senha{
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #e67e22;
+    text-decoration: none;
+
+}
+.esqueceu-senha a{
+    text-decoration: none;
+    color: #e67e22;
+}
+/* Link de 'Já tem uma conta?' */
+.link-toggle {
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.link-toggle a {
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-toggle a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagem de erro */
+.error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="css/stylecarrinho.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+<body>
+
+<!-- Início da codificação, para a área de cabeçalho da página -->
+<header class="container">
+    <div class="logo">
+    <img src="img/logos/logo.png">
+    </div>
+    <div class="searchber">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="Busca por marcas e produtos">
+    </div>
+    <div class="login hiconcss">
+        <i class="fa-regular fa-circle-user"></i>
+        <a href="login.html"><span>Login</span> </a>
+    </div>
+    
+    <a href="index.html"><span>Retornar</span> </a>
+
+</header>
+
+
+<main class="container4">
+    <h2>Carrinho de Compras</h2>
+
+    <div id="produtosCarrinho">
+        <!-- Aqui os produtos serão exibidos via JavaScript -->
+    </div>
+
+    <div id="total">
+        <h3>Total: R$ <span id="totalValue">0.00</span></h3>
+    </div>
+    <tr>
+        <div class="finalizar"><a href="login.html">Finalizar</a></div>
+    </tr>	
+</main>
+
+<script>
+    // Função para carregar os itens do carrinho
+function carregarCarrinho() {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    let produtosCarrinhoDiv = document.getElementById('produtosCarrinho');
+    let total = 0;
+    
+    // Limpar a lista de produtos no carrinho
+    produtosCarrinhoDiv.innerHTML = '';
+
+    // Exibir cada produto no carrinho
+    carrinho.forEach(produto => {
+        let itemCarrinho = document.createElement('div');
+        itemCarrinho.classList.add('item-carrinho');
+        itemCarrinho.innerHTML = `
+            <div class="info-produto">
+                <p>${produto.nome}</p>
+                <p>R$ ${produto.preco.toFixed(2)}</p>
+            </div>
+            <div class="acoes-produto">
+                <button onclick="atualizarQuantidade('${produto.nome}', -1)">-</button>
+                <span id="quantidade-${produto.nome}">${produto.quantidade}</span>
+                <button onclick="atualizarQuantidade('${produto.nome}', 1)">+</button>
+                <button onclick="removerItem('${produto.nome}')">Remover</button>
+            </div>
+        `;
+        produtosCarrinhoDiv.appendChild(itemCarrinho);
+
+        // Atualizando o total
+        total += produto.preco * produto.quantidade;
+    });
+
+    // Exibir o total
+    document.getElementById('totalValue').textContent = total.toFixed(2);
+}
+
+// Função para remover um item do carrinho
+function removerItem(nomeProduto) {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    carrinho = carrinho.filter(produto => produto.nome !== nomeProduto);
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    carregarCarrinho(); // Atualizar o carrinho na página
+}
+
+// Função para atualizar a quantidade de um item
+function atualizarQuantidade(nomeProduto, quantidade) {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    let produto = carrinho.find(prod => prod.nome === nomeProduto);
+    
+    if (produto) {
+        produto.quantidade += quantidade;
+        if (produto.quantidade <= 0) {
+            produto.quantidade = 1;
+        }
+    }
+
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    carregarCarrinho(); // Atualizar o carrinho na página
+}
+
+// Carregar o carrinho ao carregar a página
+window.onload = carregarCarrinho;
+
+</script>
+
+	<!-- Início da codificação, para a área de rodapé da página -->
+	<footer class="footer container">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Baixe nosso aplicativo</h3>
+					<p>Baixe o aplicativo para celulares Android e iOS</p>
+					<div class="app-logo">
+						<a
+							href="https://play.google.com/store/games?device=windows&&utm_source=latam_Med&utm_medium=hasem&utm_content=Dec1622&utm_campaign=Evergreen&pcampaignid=MKT-EDR-latam-br-1710138+-Med-hasem-py-Evergreen-Dec1622-Text_Search_BKWS-id_102355_%7CEXA%7CONSEM_kwid_43700074755585158_adgroupid_143609464503_keywordid_kwd-28432345789&gad_source=1&gclid=Cj0KCQjwqcO_BhDaARIsACz62vNenismyNfkL4G5NDpI_Q1RXOAy_1E741UfutbnU8Ze0ziknjiR_LEaAk5oEALw_wcB&gclsrc=aw.ds&pli=1">
+							<img src="img/play-store.png" alt="play-store"></a>
+					<a href="https://www.apple.com/br/store?cid=aos-br-kwgo-brand">	<img src="img/app-store.png" alt="play-store"> </a>
+					</div>
+				</div>
+				<div class="footer-col-2">
+					<img src="img/logos/logo.png" alt="Pet Etec">
+					<p>Nosso propósito é tornar o prazer e os benefícios dos esportes acessíveis a
+						muitos de forma sustentável.</p>
+				</div>
+				<div class="footer-col-3">
+					<h3>Links úteis</h3>
+					<ul>
+						<li><a href="login.html">Cupons</a></li>
+						<li><a href="devolução.html">Política de devolução</a></li>
+						<li><a href="cadastro.html">Junte-se</a></li>
+					</ul>
+				</div>
+				<div class="footer-col-3">
+					<h3>Siga-nos</h3>
+					<ul>
+						<li><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dpt_BR"><i class="fab fa-facebook"></i>&nbsp;Facebook</a></li>
+						<li><a href="https://x.com/?lang=pt"><i class="fab fa-twitter"></i>&nbsp;Twitter</a></li>
+						<li><a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i>&nbsp;Instagram</a></li>
+						<li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i>&nbsp;YouTube</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<p class="reservados">Todos os Direitos Reservados 2025 - Prof Barbosa</p>
+	</footer>
+
+</body>
+</html>

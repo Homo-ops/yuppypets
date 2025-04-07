@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe9bf; /* Cor de fundo para quando a imagem não carregar */
+    background-image: url('https://img.freepik.com/fotos-gratis/vista-superior-de-uma-tigela-completa-de-racao-para-caes-e-acessorios_23-2148949574.jpg?uid=R194792476&ga=GA1.1.8176135.1743819772&semt=ais_hybrid&w=740');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    background-size: cover;
+    background-position: center;
+  }
+
+  .texto, .container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #d18a33; /* Variação de laranja */
+    text-align: center;
+}
+h2 {
+    color: #d1b683;
+    margin-top: 20px;
+}
+p, ul {
+    line-height: 1.6;
+    font-size: 1em;
+}
+ul {
+    margin-left: 20px;
+    list-style-type: square;
+    color: #d18a33;
+}
+a {
+    color: #d18a33;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 300px;
+    background-color: #ffe9bf; /* Fundo do formulário */
+}
+input[type="submit"] {
+    background-color: #d18a33; /* Botão laranja */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+input[type="submit"]:hover {
+    background-color: #bf7e2c; /* Tom mais escuro no hover */
+}
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: #d1b683;
+    color: white;
+    margin-top: 20px;
+}

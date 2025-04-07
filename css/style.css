@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/* Estilo para a seção de categorias */
+.catagory {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.catagory .card {
+    flex: 1 1 calc(16.6% - 10px); /* Cada card ocupa 1/6 do espaço disponível */
+    margin: 5px;
+    text-align: center;
+}
+
+.catagory img {
+    max-width: 64px; /* Tamanho fixo para os ícones */
+    margin-bottom: 5px;
+}
+
+.catagory p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+
+
+
+span{
+	text-decoration: none;
+	font-family: Marker Felt, fantasy;
+	color:#158674;
+}
+
+body{
+    background-color: #ffffff;
+}
+.container{
+    max-width: 1334px;
+    margin: auto;
+}
+/* ====================================== */
+header{
+    height: 100px;
+	width: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #474748;
+    background-color: #ffe9bf;
+}
+
+.logo {
+    width: 100px;
+	height:140px;
+	display: flex;
+    align-items: center;
+	object-fit: cover;
+}
+
+.searchber{
+    height: 40px;
+    width: 560px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #777A7E;
+    background-color: #F0F5FF;
+}
+
+.searchber i{
+   font-size: 1.4rem;
+   margin: 0px 10px;
+}
+
+.searchber input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+
+}
+.hiconcss{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 400;
+}
+
+.hiconcss i{
+    font-size: 1.2rem;
+}
+
+div>.ldicon{
+   font-size: 0.7rem; 
+}
+
+/* --------------------- */
+.catagory_container{
+    height: 140px;
+}
+.catagory{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    margin: 10px 0px;
+    
+}
+
+/* -------------------------------------------------------------------------*/
+/* ============================== CARDS DE CATEGORIAS - INÍCIO ============ */
+
+.card {
+  /* Add shadows to create the "card" effect */
+  transition: 0.3s;
+  display: flex;
+    align-items: center;
+}
+.card p {
+	font-family: Marker Felt, fantasy;
+	color:#158674;
+	display: flex;
+    align-items: center;
+	padding-bottom: 10px;
+}
+.card img{
+	width: 42x;
+	height: 42px;
+	color: #335288;
+	display: flex;
+    align-items: center;
+}
+
+.card a{
+	
+	display: flex;
+    align-items: center;
+	color:#158674;
+}
+
+.card a:hover{
+	color: #335288;
+}
+
+
+/* On mouse-over, add a deeper shadow 
+.card:hover {
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+}*/
+
+/* Add some padding inside the card container */
+.container {
+  padding: 5px 20px;
+}
+
+/* ============================== CARDS DE CATEGORIAS - FIM ============ */
+
+/* ======================================================================== */
+
+/* Estilos básicos do carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {  display: flex; transition: transform 0.5s ease-in-out;height:700px ; 
+    padding-top: 10px; /* Adiciona 50px de espaço interno no topo */
+
+ }
+
+/* Para o texto no rodapé */
+.slide {   min-width: 100%; position: relative;height: 858px; }
+
+img {   width: 100%; height: auto; border-radius: 10px; }
+
+/* Rodapé com duas linhas de texto */
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente preto */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.caption h2, .caption p {  margin: 0; line-height: 1.5; }
+
+button {
+  position: absolute;
+  margin-top: 200px;
+  transform: translateY(-500px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bunners{
+    width: 100%;
+    height: 858px;
+}
+.prev {  left: 10px; }
+
+.next {  right: 10px;}
+
+button:hover { background-color: rgba(0, 0, 0, 0.8); }
+
+/* Indicadores (botões) fora da área de exibição do carousel */
+/* Mover para fora da área da imagem */
+.indicators { text-align: center; margin-top: 5px; }
+
+.dot {
+    margin-top: 20px;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active { background-color: rgba(0, 0, 0, 0.9); }
+
+.dot:hover { background-color: rgba(0, 0, 0, 0.7); }
+
+/* =========================================================================== */
+
+/* ==================== ÁREA DO RODAPÉ - FOOTER ========================================*/
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;	
+}
+
+
+
+
+
+.col-2{flex-basis: 50%; min-width: 300px; }
+
+.col-2 img{max-width: 100%; padding: 50px 0; align-items: right;}
+
+.col-2 h1{ font-size: 50px; line-height: 60px; margin: 25px 0; }
+
+.btn{
+	display: inline-block;
+	background: #ff523b;
+	color: #fff;
+	padding: 8px 30px;
+	margin: 30px 0;
+	border-radius:30px;
+	transition: background 0.5s;
+}
+
+.btn:hover{ background: #563434; color: #fff; }
+
+.footer{
+	Background: #000;
+	color: #8a8a8a;
+	font-size: 14px;
+	padding: 60px 0 20px;
+}
+
+.footer p{
+	color: #8a8a8a;
+}
+
+.footer h3{
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.footer a{
+	color: #fff;
+}
+
+.footer-col-1, 
+.footer-2,
+.footer-col-3, 
+.footer-4{
+	min-width: 250px;
+	margin-bottom: 20px;
+}
+
+.footer-col-1{
+	flex-basis: 30%;
+}
+
+.footer-col-2{
+	flex: 1;
+	text-align: center;
+}
+
+.footer-col-2 img{
+	width: 180px;
+	margin-bottom: 20px;
+}
+
+.footer-col-3, .footer-col-4{
+	flex-basis: 12%;
+	text-align: left;
+}
+
+ul{
+	list-style-type: none;
+}
+
+.app-logo{
+	margin-top: 20px;
+}
+
+.app-logo img{
+	width: 140px;
+}
+
+.footer hr{
+	border: none;
+	Background: #b5b5b5;
+	height: 1px;
+	margin: 20px 0;
+}
+
+.reservados{
+	text-align: center;
+}
+
+.menu-icon{
+	width: 28px;
+	margin-left: 20px;
+	display: none;
+}
+
+.row-2{
+	justify-content: space-between;
+	margin: 100px auto 50px;
+}
+
+/* ============================== NOVA ÁREA DE RODAPÉ - FIM =============== */
+
+/* ============================== ÁREA DE PRODUTOS - INÍCIO =============== */
+
+.small-container{
+	max-width: 1800px; /* 1080px; */
+	margin: auto;
+	padding-left: 95px;
+	padding-right: 95px;
+} 
+
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	max-width: 1800px; /* 1080px; */
+	margin: auto;
+	padding-left: 95px;
+	padding-right: 95px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-4 img {
+	width: 200px; /* Mantém o tamanho original */
+    height: 300px; /* Ajusta proporcionalmente a altura */
+    border: 2px solid #335288; /* Borda verde */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.col-4 {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.col-4 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.col-4 h4 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.rating i {
+    color: #FFD700;
+}
+
+p {
+    color: #158674;
+    font-weight: bold;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    background: #158674;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #158674;
+}
+.title{
+	font-family: Marker Felt, fantasy;
+	color:#335288;
+	text-align: center;
+	margin: 0 auto 80px;
+	position: relative;
+	padding-top: 10px;
+	
+}
+.title::after{
+	content: '';
+	background: #158674;;
+	width: 80px;
+	height: 5px;
+	border-radius: 5px;
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+}	
+
+.col-2 .offer-img{ padding: 50px; }
+small{ color:#555; }
+
+
+.testimonial{ padding-top: 100px; }
+
+.testimonial col-3{
+	text-align: center;
+	padding: 40px 20px;/*
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+	cursor: pointer;
+	transition: transform 0.5s;*/
+}
+.testimonial col-3 img{
+	width: 50px;
+	margin-top: 20px;
+	border-radius: 50%;
+}	
+.testimonial col-3:hover{ transform: translateY(-10px); }
+
+.fa.fa-quote-left{ font-size: 34px; color: #ff523b; }
+
+.col-3 p{
+	font-size: 12px;
+	margin: 12px 0;
+	color: #777;
+}
+.testimonial .col-3 h3{
+	font-weight: 600;
+	color: #555;
+	font-size: 16px;
+}
+.brands { margin: 100px; }
+.col-5 { width: 160px; }
+.col-5 img{
+	width: 100%;
+	cursor: pointer;
+	filter: grayscale(100%);
+}
+.col-5 img:hover{ filter: grayscale(0); }
+
+
+select{
+	border: 1px solid #ff523b;
+	padding: 5px;
+}
+
+select:focus{
+	outline: none;
+}
+
+.page-btn{
+	margin: 0 auto 80px;
+}
+
+.page-btn span{
+	display: inline-block;
+	border: 1px solid #ff523b;
+	margin-left:10px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	cursor:pointer;
+}
+
+.page-btn span:hover{
+	background: #ff523b;
+	color: #fff;
+}
+
+/*   detalhes do produto   */
+
+.single-product{
+	margin-top: 80px;
+}
+
+.single-product .col-2 img{
+	padding: 0;
+}
+
+.single-product .col-2{
+	padding: 20px;
+}
+
+.single-product h4{
+	margin: 20px 0;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.single-product select{
+	display: block;
+	padding: 10px;
+	margin-top:  20px;
+}
+
+.single-product input{
+	width: 50px;
+	height: 40px;
+	padding-left: 10px;
+	font-size: 20px;
+	margin-right: 10px;
+	border: 1px solid #ff523b;
+}
+
+input:focus{
+	outline: none;
+}
+
+.single-product .fa{
+	color: #ff523b;
+	margin-left: 10px;
+}
+
+.small-img-row{
+	display: flex;
+	justify-content:space-between;
+}
+
+/*
+.small-img-col{
+	display: flex;
+	justify-content:space-between;
+	cursor: pointer;
+}
+*/
+
+
+
+
+
+/* carrinho */
+
+.container4 {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Título do carrinho */
+.container4 h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Área dos produtos */
+#produtosCarrinho {
+    margin-bottom: 20px;
+}
+
+/* Total do carrinho */
+#total h3 {
+    text-align: right;
+    color: #444;
+    font-size: 18px;
+}
+
+/* Valor total */
+#totalValue {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 600px) {
+    .container4 {
+        padding: 10px;
+    }
+
+    #total h3 {
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+/* Estilo para os itens do carrinho */
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Informações do produto */
+.info-produto {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ações do produto */
+.acoes-produto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.acoes-produto button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.acoes-produto button:hover {
+    background-color: #0056b3;
+}
+
+/* Quantidade */
+.acoes-produto span {
+    font-weight: bold;
+    margin: 0 5px;
+}

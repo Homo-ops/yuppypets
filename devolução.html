@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<meta name="description"
+		content="Encontre tudo o que seu pet precisa em nosso petshop online! Produtos de qualidade, entregas rápidas e atendimento especializado para cuidar do seu melhor amigo.">
+	<meta name="keyword" content="Produtos para pets">
+	<meta name="author" content="Carlos Eduardo, Vitória, Murilo e Pablo">
+
+
+	<title>Pet Etec</title>
+
+	<link rel="stylesheet" href="css/devolucao.css" type="text/css" media="all">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <div class="texto">
+    <h1>Políticas de Devolução</h1>
+    <p>Nosso objetivo é garantir sua satisfação. Se precisar devolver um produto, por favor, leia nossas políticas abaixo:</p>
+
+    <h2>Condições de Devolução</h2>
+    <ul>
+        <li>O produto deve estar em perfeito estado e sem sinais de uso.</li>
+        <li>A devolução deve ser solicitada dentro de 30 dias após o recebimento.</li>
+        <li>O cliente deve fornecer o comprovante de compra.</li>
+    </ul>
+
+    <h2>Procedimento</h2>
+    <p>Para iniciar o processo de devolução, entre em contato conosco pelo e-mail <a href="mailto:suporte@exemplo.com">suporte@exemplo.com</a>. Nosso atendimento irá fornecer as instruções necessárias.</p>
+
+    <h2>Reembolso</h2>
+    <p>Após recebermos e verificarmos o produto devolvido, o reembolso será processado dentro de 7 dias úteis.</p>
+
+    <p>Se tiver dúvidas adicionais, não hesite em nos contatar.</p>
+    </div>
+    <div class="container">
+        <h1>Formulário de Devolução</h1>
+        <form action="/enviar-devolucao" method="post">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="motivo">Motivo da Devolução:</label>
+            <textarea id="motivo" name="motivo" rows="4" required></textarea>
+
+            <label for="comprovante">Número do Comprovante:</label>
+            <input type="text" id="comprovante" name="comprovante" required>
+
+            <input type="submit" value="Enviar Solicitação">
+        </form>
+    </div>
+
+
+</body>
+</html>
